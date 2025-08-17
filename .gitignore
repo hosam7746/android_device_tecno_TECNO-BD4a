@@ -1,0 +1,31 @@
+# Node
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Next.js
+.next
+out
+.next/cache
+
+# Netlify
+.netlify
+
+# Logs
+logs
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Editor
+.vscode
+.DS_Store
+.idea
