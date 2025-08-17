@@ -1,0 +1,24 @@
+{
+  "name": "ibtikar-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Ibtikar Platform monorepo: apps/web + packages + services",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @ibtikar/web",
+    "build": "npm run build -w @ibtikar/web",
+    "start": "npm run start -w @ibtikar/web",
+    "lint": "npm run lint -w @ibtikar/web",
+    "typecheck": "npm run typecheck -w @ibtikar/web",
+    "build:packages": "npm run build -w @ibtikar/types && npm run build -w @ibtikar/utils && npm run build -w @ibtikar/ui && npm run build -w @ibtikar/recommendation",
+    "postinstall": "npm run build:packages"
+  },
+  "engines": {
+    "node": ">=18.17.0 <=22"
+  },
+  "license": "MIT"
+}
